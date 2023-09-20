@@ -1,0 +1,119 @@
+<!-- RiskyAndRisklessManuallyModal -->
+<div
+  class="modal fade"
+  tabindex="-1"
+  #riskyAndRisklessManuallyModal
+  id="riskyAndRisklessManuallyModal"
+>
+  <div
+    class="modal-dialog modal-dialog-centered"
+    [class]="getRiskyAndRisklessManuallyModalClass()"
+  >
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <div class="mbd-icon-riskless mbd-icon">
+          <i class="fas fa-check"></i>
+        </div>
+        <div class="mbd-icon-risky mbd-icon">
+          <i class="fas fa-exclamation"></i>
+        </div>
+        <p>{{ manually_masked_identity_number }}</p>
+        <p>T.C. Kimlik / Pasaport numaralı</p>
+        <p>{{ manually_masked_firstname }} {{ manually_masked_lastname }}</p>
+        <div [class]="getRiskyAndRisklessManuallyModalHealtStatusClass()">
+          {{ manually_current_health_status | healthStatus }}
+        </div>
+      </div>
+      <div class="modal-health-button mt-3">
+        <div class="d-grid gap-2">
+          <button
+            [class]="getRiskyAndRisklessManuallyModalButtonClass()"
+            type="button"
+            data-bs-dismiss="modal"
+            id="riskyAndRisklessManuallyModalCloseButton"
+          >
+            Lütfen Bekleyiniz
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End of RiskyAndRisklessManuallyModal -->
+
+<!-- ErrorManuallyModal -->
+<div
+  class="modal fade"
+  tabindex="-1"
+  #errorManuallyModal
+  id="errorManuallyModal"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>{{ errorManuallyContent | healthStatus }}</p>
+      </div>
+      <div class="modal-health-button mt-3">
+        <div class="d-grid gap-2">
+          <button
+            class="btn btn-warning"
+            type="button"
+            data-bs-dismiss="modal"
+            id="riskyAndRisklessManuallyModalCloseButton"
+          >
+            Kapat
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End of ErrorManuallyModal -->
+
+<br /><br />
+<!-- <p><b>HES Kodunuzu Yazarak Sorgulayınız</b></p> -->
+<form [formGroup]="manuallyHesCodeForm" class="py-4 hes-code-form" *ngIf="locationDataLoaded == true">
+  <div class="input-group">
+    <input
+      formControlName="hes_code"
+      type="text"
+      class="form-control"
+      placeholder="Hes Kodunu Yazın"
+      aria-label="Recipient's username"
+      aria-describedby="button-addon"
+    />
+    <input
+      formControlName="city"
+      type="text"
+      class="form-control"
+      aria-label="Recipient's username"
+      aria-describedby="button-addon"
+      hidden
+    />
+    <input
+      formControlName="district"
+      type="text"
+      class="form-control"
+      aria-label="Recipient's username"
+      aria-describedby="button-addon"
+      hidden
+    />
+    <input
+      formControlName="explicit_address"
+      type="text"
+      class="form-control"
+      aria-label="Recipient's username"
+      aria-describedby="button-addon"
+      hidden
+    />
+
+    <button
+      (click)="sendCheckVisitorHesCodeManually()"
+      class="btn btn-outline-secondary"
+      type="button"
+      id="button-addon"
+    >
+    <i class="fas fa-search"></i>
+    </button>
+  </div>
+</form>

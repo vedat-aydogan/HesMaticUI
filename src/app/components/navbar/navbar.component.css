@@ -1,0 +1,17 @@
+.btn-outline-primary {
+  color: #000;
+  border-color: #000;
+}
+.btn-outline-primary:hover {
+  background-color: rgb(0, 135, 189);
+  color: #fff !important;
+}
+
+.btn-outline-success {
+  color: #000;
+  border-color: #000;
+}
+.btn-outline-success:hover {
+  background-color: #81cb42;
+  color: #fff !important;
+}

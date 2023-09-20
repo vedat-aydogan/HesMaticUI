@@ -1,0 +1,31 @@
+<nav class="navbar navbar-light">
+  <form class="container-fluid justify-content-right">
+    <a class="navbar-brand" href="#">
+      <img
+        src="https://d19m59y37dris4.cloudfront.net/bubbly/1-0/img/brand/brand-1.svg"
+        alt=""
+        width="30"
+        height="24"
+        class="d-inline-block align-text-top"
+      />
+      Hes Kontrol Cihazi
+    </a>
+    <div>
+      <button
+        onclick="document.location='http://localhost:4200/admin'"
+        class="btn btn-outline-primary me-2"
+        type="button"
+      >
+        Yönetici Paneli
+      </button>
+      <button
+        routerLink="/hes-run"
+        class="btn btn-outline-success me-2"
+        type="button"
+      >
+        Hes Sorgulama
+      </button>
+      <app-logout></app-logout>
+    </div>
+  </form>
+</nav>

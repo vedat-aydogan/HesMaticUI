@@ -1,0 +1,108 @@
+<!-- RiskyAndRisklessQrModal -->
+<div
+  class="modal fade"
+  tabindex="-1"
+  #riskyAndRisklessQrModal
+  id="riskyAndRisklessQrModal"
+>
+  <div
+    class="modal-dialog modal-dialog-centered"
+    [class]="getRiskyAndRisklessQrModalClass()"
+  >
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <div class="mbd-icon-riskless mbd-icon">
+          <i class="fas fa-check"></i>
+        </div>
+        <div class="mbd-icon-risky mbd-icon">
+          <i class="fas fa-exclamation"></i>
+        </div>
+        <p>{{ qr_masked_identity_number }}</p>
+        <p>T.C. Kimlik / Pasaport numarali</p>
+        <p>{{ qr_masked_firstname }} {{ qr_masked_lastname }}</p>
+        <div [class]="getRiskyAndRisklessQrModalHealtStatusClass()">
+          {{ qr_current_health_status | healthStatus }}
+        </div>
+      </div>
+      <div class="modal-health-button mt-3">
+        <div class="d-grid gap-2">
+          <button
+            [class]="getRiskyAndRisklessQrModalButtonClass()"
+            type="button"
+            data-bs-dismiss="modal"
+            id="riskyAndRisklessQrModalCloseButton"
+          >
+            Lütfen Bekleyiniz
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End of RiskyAndRisklessQrModal -->
+
+<!-- ErrorQrModal -->
+<div class="modal fade" tabindex="-1" #errorQrModal id="errorQrModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>{{ errorQrContent | healthStatus }}</p>
+      </div>
+      <div class="modal-health-button mt-3">
+        <div class="d-grid gap-2">
+          <button
+            class="btn btn-warning"
+            type="button"
+            data-bs-dismiss="modal"
+            id="riskyAndRisklessQrModalCloseButton"
+          >
+            Kapat
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End of ErrorQrModal -->
+
+<form [formGroup]="qrHesCodeForm" *ngIf="locationDataLoaded == true"></form>
+
+<div
+  routerLink="/login"
+  type="button"
+  class="qr-code-close"
+  *ngIf="deviceCurrentLoaded == true"
+>
+  <i class="fas fa-times"></i>
+</div>
+<div class="camera-target" *ngIf="deviceCurrentLoaded == true">
+  <div class="camera-target-box">
+    <div class="camera-target-1"></div>
+    <div class="camera-target-2"></div>
+    <div class="camera-target-3"></div>
+    <div class="camera-target-4"></div>
+  </div>
+</div>
+
+<zxing-scanner
+  [delayBetweenScanSuccess]="delayBetweenScanSuccess"
+  (camerasFound)="onCamerasFound($event)"
+  [torch]="torchEnabled"
+  (deviceChange)="onDeviceChange()"
+  [device]="deviceCurrent"
+  (scanSuccess)="onCodeResult($event)"
+  [formats]="formatsEnabled"
+  [tryHarder]="tryHarder"
+  (permissionResponse)="onHasPermission($event)"
+  (torchCompatible)="onTorchCompatible($event)"
+></zxing-scanner>
+<!-- [device]="deviceCurrent" -->
+<!-- (deviceChange)="onDeviceChange($event)" -->
+
+<!-- <section class="results" *ngIf="qrHesCode">
+  <div>
+    <small>Result</small>
+    <strong>{{ qrHesCode }}</strong>
+  </div>
+  <button mat-icon-button (click)="clearResult()">&times;</button>
+</section> -->

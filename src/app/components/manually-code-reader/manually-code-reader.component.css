@@ -1,0 +1,91 @@
+p {
+  text-align: center;
+}
+.modal-risky .mbd-icon-riskless {
+  display: none;
+}
+.modal-riskless .mbd-icon-risky {
+  display: none;
+}
+.mbd-icon {
+  width: 110px;
+  margin: 0 auto 25px auto;
+  height: 110px;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mbd-icon i {
+  font-size: 60px;
+  color: #fff;
+}
+.mbd-icon-riskless {
+  background-color: #81cb42 !important;
+}
+.mbd-icon-risky {
+  background-color: red;
+}
+.modal-body {
+  padding: 40px 0;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 15px !important;
+}
+.modal-body p {
+  margin: 5px 0;
+  font-size: 28px;
+  color: #555;
+}
+.btn-danger {
+  background-color: red !important;
+}
+.health-status-risky {
+  color: red;
+  margin-top: 20px;
+  font-size: 40px;
+  font-weight: bold;
+}
+.health-status-riskless {
+  color: #81cb42 !important;
+  margin-top: 20px;
+  font-size: 40px;
+  font-weight: bold;
+}
+.modal-health-button {
+  width: 100%;
+  clear: both;
+}
+.modal-health-button button {
+  border-radius: 15px;
+  font-size: 25px;
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+}
+.modal-content {
+  background-color: transparent !important;
+  border: none !important;
+}
+.modal-content .btn-success {
+  background-color: #81cb42 !important;
+}
+.modal-content .btn-warning {
+  color: rgb(24, 24, 24);
+}
+
+.btn-outline-primary {
+  color: #fff;
+  border-color: #fff;
+}
+.btn-outline-primary:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-outline-success {
+  color: #fff;
+  border-color: #fff;
+}
+.btn-outline-success:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}

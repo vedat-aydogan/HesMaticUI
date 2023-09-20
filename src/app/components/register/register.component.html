@@ -1,0 +1,144 @@
+<body class="bg-cover">
+  <div class="login-and-register-form">
+    <div class="login-and-register-form-area py-3">
+      <div class="text-center">
+        <img
+          class="img-fluid mb-4"
+          src="https://d19m59y37dris4.cloudfront.net/bubbly/1-0/img/brand/brand-1.svg"
+          alt="..."
+          style="max-width: 6rem"
+        />
+      </div>
+      <form [formGroup]="registerForm" class="w-100" autocomplete="off">
+        <div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <!-- <label class="form-label" for="registerFirstname">Ad </label> -->
+              <input
+                formControlName="firstName"
+                class="form-control"
+                id="registerFirstname"
+                type="text"
+                name="registerFirstname"
+                placeholder="Ad"
+              />
+            </div>
+            <div class="col-md-6 mb-3">
+              <!-- <label class="form-label" for="registerLastname">Soyad </label> -->
+              <input
+                formControlName="lastName"
+                class="form-control"
+                id="registerLastname"
+                type="text"
+                name="registerLastname"
+                placeholder="Soyad"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <!-- <label class="form-label" for="registerEmail">E-posta</label> -->
+              <input
+                formControlName="email"
+                class="form-control"
+                id="registerEmail"
+                type="email"
+                name="registerEmail"
+                placeholder="E-posta"
+                autocomplete="off"
+              />
+            </div>
+            <div class="col-md-6 mb-3">
+              <!-- <label class="form-label" for="registerPassword">Şifre</label> -->
+              <input
+                autocomplete="off"
+                formControlName="password"
+                class="form-control"
+                id="registerPassword"
+                type="password"
+                name="registerPassword"
+                placeholder="Şifre"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- <div class="form-check mb-4">
+          <input
+            class="form-check-input me-2"
+            id="registerAgree"
+            type="checkbox"
+            value=""
+          />
+          <label class="form-check-label" for="registerAgree"
+            >I agree with the terms and policy
+          </label>
+        </div> -->
+        <div class="mb-3">
+          <!-- <label class="form-label" for="registerCompanyName">Şirket Adı</label> -->
+          <input
+            formControlName="companyName"
+            class="form-control"
+            id="registerCompanyName"
+            type="text"
+            name="registerCompanyName"
+            placeholder="Şirket Adı"
+          />
+        </div>
+        <div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <!-- <label class="form-label" for="registerCity">Şehir</label> -->
+              <input
+                formControlName="city"
+                class="form-control"
+                id="registerCity"
+                type="text"
+                name="registerCity"
+                placeholder="Şehir"
+              />
+            </div>
+            <div class="col-md-6 mb-3">
+              <!-- <label class="form-label" for="registerDistrict">İlçe</label> -->
+              <input
+                formControlName="district"
+                class="form-control"
+                id="registerDistrict"
+                type="text"
+                name="registerDistrict"
+                placeholder="İlçe"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <!-- <label class="form-label" for="registerAddress">Adres</label> -->
+          <input
+            formControlName="address"
+            class="form-control"
+            id="registerAddress"
+            type="text"
+            name="registerAddress"
+            placeholder="Adres"
+          />
+        </div>
+        <!-- Submit-->
+        <div class="d-grid mb-5">
+          <button (click)="register()" class="btn btn-primary text-uppercase">
+            Kaydol
+          </button>
+        </div>
+        <!-- Link-->
+        <p class="text-center">
+          <small class="text-muted text-center"
+            >Zaten bir hesabınız var mı?
+            <a routerLink="/login">Oturum Aç</a></small
+          >
+        </p>
+      </form>
+    </div>
+    <!-- Image-->
+  </div>
+</body>

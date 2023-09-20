@@ -1,0 +1,8 @@
+.btn-outline-danger {
+  color: #000 !important;
+  border-color: #000 !important;
+}
+.btn-outline-danger:hover {
+  background-color: red;
+  color: #fff !important;
+}

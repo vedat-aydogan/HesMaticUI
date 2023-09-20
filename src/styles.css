@@ -1,0 +1,219 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* html, body { height: 100%; } */
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  min-height: 100vh;
+  height: auto;
+}
+.btn-primary {
+  background-color: #457917 !important;
+  border: none !important;
+  padding: 10px 0.75rem !important;
+  border-radius: 10px;
+  margin-top: 25px;
+}
+a {
+  color: #000 !important;
+}
+.navbar-brand a {
+  color: #000 !important;
+}
+textarea:focus,
+textarea.form-control:focus,
+input.form-control:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+[type="text"].form-control:focus,
+[type="password"].form-control:focus,
+[type="email"].form-control:focus,
+[type="tel"].form-control:focus,
+[contenteditable].form-control:focus {
+  box-shadow: inset 0 -1px 0 #ddd;
+}
+
+.bg-cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("./assets/img/main-bg.jpg");
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  box-shadow: 0 0 0 30px rgb(226, 226, 226) inset !important;
+  -webkit-box-shadow: 0 0 0 30px rgb(226, 226, 226) inset !important;
+  -webkit-text-fill-color: #000 !important;
+  font-size: inherit !important;
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 1);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4) !important;
+}
+
+app-qr-code-reader video {
+  height: 100vh !important;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100% !important;
+}
+.camera-target {
+  position: absolute;
+  top: 10vh;
+  left: 25%;
+  width: 50%;
+  height: 70vh;
+  z-index: 999;
+}
+.camera-target-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.camera-target-1:before {
+  width: 80px;
+  height: 10px;
+  background-color: #457917;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+}
+.camera-target-1:after {
+  width: 10px;
+  height: 80px;
+  background-color: #457917;
+  position: absolute;
+  top: 10;
+  left: 0;
+  content: "";
+}
+
+.camera-target-2:before {
+  width: 80px;
+  height: 10px;
+  background-color: #457917;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+}
+.camera-target-2:after {
+  width: 10px;
+  height: 80px;
+  background-color: #457917;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  content: "";
+}
+
+.camera-target-3:before {
+  width: 80px;
+  height: 10px;
+  background-color: #457917;
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+}
+.camera-target-3:after {
+  width: 10px;
+  height: 80px;
+  background-color: #457917;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  content: "";
+}
+.camera-target-4:before {
+  width: 80px;
+  height: 10px;
+  background-color: #457917;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  content: "";
+}
+.camera-target-4:after {
+  width: 10px;
+  height: 80px;
+  background-color: #457917;
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  content: "";
+}
+
+.hes-code-form {
+  position: absolute;
+  bottom: 0px;
+  left: 5%;
+  width: 90%;
+  z-index: 9999;
+}
+.hes-code-form input {
+  background-color: rgb(192, 192, 192);
+  border: none !important;
+  color: #333 !important;
+  font-weight: bold;
+  padding: 10px 0.75rem !important;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.hes-code-form button {
+  background-color: #457917 !important;
+  border: none !important;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomright: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: #fff !important;
+}
+::placeholder {
+  color: #333 !important;
+}
+
+.qr-code-close {
+  position: absolute;
+  right: 20px !important;
+  top: 20px !important;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  border-radius: 10px;
+}
+.qr-code-close {
+  font-size: 15px;
+  color: #fff;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

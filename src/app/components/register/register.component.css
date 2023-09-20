@@ -1,0 +1,29 @@
+.login-and-register-form-area {
+  width: 70%;
+  z-index: 9;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 30px;
+  height: fit-content;
+  margin: 50px auto;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+.form-control {
+  background-color: rgb(226, 226, 226) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  border-radius: 15px !important;
+  color: #000 !important;
+  padding: 10px 0.75rem !important;
+}
+::placeholder {
+  color: #000 !important;
+}
+
+.text-muted {
+  color: #000 !important;
+}
+
+a {
+  text-decoration: none;
+}
